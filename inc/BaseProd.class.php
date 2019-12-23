@@ -1,11 +1,19 @@
 <?php
 
+   //а) Есть абстрактный товар.
     abstract class BaseProd{
         private $title;
         private $price;
         private $rate;
         private $image;
+        private $amount;
 
+        public function __construct($price,$amount){
+            $this->setPrice($price);
+            $this->setAmount($amount);
+        }
+
+        // Set and Get Title
         public function setTitle($title): void{
             $this->title = $title;
         }
@@ -14,6 +22,7 @@
             return $this->title;
         }
 
+        // Set and Get Price
         public function setPrice($price): void{
             $this->price = $price;
         }
@@ -22,6 +31,7 @@
             return $this->price;
         }
 
+        // Set and Get Rate
         public function setRate($rate): void{
             $this->rate = $rate;
         }
@@ -30,6 +40,7 @@
             return $this->rate;
         }
 
+        // Set and Get Image
         public function setImage($image): void{
             $this->image = $image;
         }
@@ -38,8 +49,23 @@
             return $this->image;
         }
 
+        //Set and Get Amount
 
-        abstract function getFinalPrice();
+        public function setAmount($amount): void{
+            $this->amount = $amount;
+        }
 
+        public function getAmount(){
+            return $this->amount;
+        }
+
+        //Abstract Method
+        abstract public function getFinalPrice();
+        abstract public function ShowResults();
+
+        //Show Result
+//        public function ShowResults($price,$count){
+//            return $price * $count;
+//        }
 
     }
