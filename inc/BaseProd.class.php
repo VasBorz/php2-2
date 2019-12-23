@@ -8,11 +8,6 @@
         private $image;
         private $amount;
 
-        public function __construct($price,$amount){
-            $this->setPrice($price);
-            $this->setAmount($amount);
-        }
-
         // Set and Get Title
         public function setTitle($title): void{
             $this->title = $title;
@@ -23,7 +18,7 @@
         }
 
         // Set and Get Price
-        public function setPrice($price): void{
+        public function setPrice($price){
             $this->price = $price;
         }
 
@@ -51,7 +46,7 @@
 
         //Set and Get Amount
 
-        public function setAmount($amount): void{
+        public function setAmount($amount){
             $this->amount = $amount;
         }
 
@@ -62,10 +57,5 @@
         //Abstract Method
         abstract public function getFinalPrice();
         abstract public function ShowResults();
-
-        //Show Result
-//        public function ShowResults($price,$count){
-//            return $price * $count;
-//        }
 
     }

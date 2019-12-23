@@ -6,10 +6,10 @@
 
     class DigProd extends BaseProd {
         public function getFinalPrice(){
-            return "Total price of the Single price:" . ($this->getPrice()/2) * $this->getAmount() . "$";
+            return "The TOTAL PRICE of the Digital products: " . ($this->getPrice()/2) * $this->getAmount() . "$" . "<br>";
         }
 
         public function ShowResults(){
-            return  "Price of the Single product:" . $this->getPrice()/2 . "$";
+            return  "The PRICE of the Single product:" . $this->getPrice()/2 . "$" . "<br>";
         }
     }

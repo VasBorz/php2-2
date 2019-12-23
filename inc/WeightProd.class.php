@@ -6,11 +6,12 @@
     class WeightProd extends BaseProd{
 
         public function getFinalPrice(){
-            return "Total price of the Single price:" . $this->getPrice() * $this->getAmount();
+            return "The TOTAL PRICE of the Single products: " . ($this->getPrice() * 0.1) * $this->getAmount() . "$" . "<br>";
         }
 
         public function ShowResults(){
-            return  "Price of the Single product:" . $this->getPrice()/2 . "$";
+            return  "The PRICE of the Single product: " . $this->getPrice() * 0.1 . "$" . "<br>";
         }
+
 
     }
