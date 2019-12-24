@@ -29,6 +29,7 @@
             return $this->conn;
         }
     }
+
 // Singleton to connect db.
     class ConnectDb {
         // Hold the class instance.
